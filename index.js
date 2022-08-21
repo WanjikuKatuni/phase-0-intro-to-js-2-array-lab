@@ -27,12 +27,34 @@ function destructivelyRemoveLastCat(){
 function destructivelyRemoveFirstCat(){
     cats.shift();
 }
-// function appendCat(name){
+function appendCat(name){
 
-//    newCats =[...cats, "Broom"];
-//    cats;
-//    newCats;
-// }
+    let newCats = cats.slice()
+    newCats.push(name)
+    return newCats;
+
+}
+
+function prependCat(name){
+    let newCats = cats.slice();
+    newCats.unshift(name)
+
+    return newCats;
+}
+
+function removeLastCat(){
+    let newCats = cats.slice()
+    newCats.pop()
+
+    return newCats;
+}
+
+function removeFirstCat(){
+    let newCats= cats.slice();
+    newCats.shift();
+
+    return newCats;
+}
 // function appendCat(){
 
 //     const cats = ["Milo", "Otis", "Garfield"];
